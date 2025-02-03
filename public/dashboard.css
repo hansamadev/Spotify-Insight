@@ -1,0 +1,151 @@
+/* Night Owl Tema Renkleri */
+:root {
+    --background: #011627;
+    --card-bg: #1d3b53;
+    --text-color: #d6deeb;
+    --highlight: #82aaff;
+    --button-bg: #7e57c2;
+    --button-hover: #5c40a0;
+}
+
+/* Genel Stiller */
+body {
+    transform: scale(1.5);
+    transform-origin: top center; 
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    background: var(--background);
+    color: var(--text-color);
+    height: 100vh;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    text-align: center;
+    padding: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: var(--highlight);
+}
+
+/* Zaman Aralığı Butonları */
+.time-range-buttons {
+    margin-bottom: 15px;
+}
+
+.time-range-buttons button {
+    padding: 8px 16px;
+    margin: 3px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.time-range-buttons button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* ANA KAPSAYICI FLEX OLARAK AYARLANDI */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* SANATÇILAR VE ŞARKILAR YAN YANA */
+.top-artists, .top-tracks {
+    flex: 1;
+    max-width: 450px;
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mobil ekranlarda alt alta geçme */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+}
+
+/* Sanatçı ve Şarkı Kartları */
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.list div {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.3s;
+    width: 180px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.list div:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 8px rgba(130, 170, 255, 0.7);
+}
+
+/* Resim Boyutları */
+.list img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--highlight);
+}
+
+/* Metinler */
+.list div span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 110px;
+    display: block;
+}
+
+/* Login Butonu */
+.login-button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.login-button:hover {
+    transform: scale(1.05);
+    background-color: var(--button-hover);
+}

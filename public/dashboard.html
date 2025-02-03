@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <h1>En Çok Dinlediklerin</h1>
+
+        <div class="time-range-buttons">
+            <button data-range="short_term">Son 4 Hafta</button>
+            <button data-range="medium_term">Son 6 Ay</button>
+            <button data-range="long_term">Tüm Zamanlar</button>
+        </div>
+
+        <div class="content">
+            <div class="top-artists">
+                <h2>En Çok Dinlediğin Sanatçılar</h2>
+                <div id="artists-list" class="list"></div>
+            </div>
+            <div class="top-tracks">
+                <h2>En Çok Dinlediğin Şarkılar</h2>
+                <div id="tracks-list" class="list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>

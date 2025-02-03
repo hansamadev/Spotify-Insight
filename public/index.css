@@ -1,0 +1,60 @@
+/* Temel Renkler */
+:root {
+    --background: #011627; /* Arka plan rengi */
+    --button-bg: #7e57c2; /* Butonun arka plan rengi */
+    --button-hover: #5c40a0; /* Buton hover rengi */
+    --text-color: #d6deeb; /* Yazı rengi */
+}
+
+/* Genel Sayfa Stili */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background); /* Arka plan rengi */
+    font-family: 'Fira Code', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Başlık */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #d6deeb;
+}
+
+/* Login Butonu */
+.login-button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    transform: scale(1.05); /* Biraz büyür */
+    background-color: var(--button-hover);
+    box-shadow: 0 0 10px rgba(130, 170, 255, 0.7); /* Parlama efekti */
+}
